@@ -1,0 +1,108 @@
+<form *ngIf="user">
+  <div class="form-group">
+    <input
+      type="hidden"
+      id="id"
+      name="id"
+      class="form-control"
+      [(ngModel)]="user.id"
+    />
+  </div>
+
+  <div class="form-row">
+    <div class="form-group col-sm-12 col-md-6">
+      <label for="name">Nome</label>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        class="form-control"
+        [(ngModel)]="user.name"
+      />
+    </div>
+
+    <div class="form-group col-sm-12 col-md-6">
+      <label for="surname">Cognome</label>
+      <input
+        type="text"
+        id="surname"
+        name="surname"
+        class="form-control"
+        [(ngModel)]="user.surname"
+      />
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="form-group col-sm-12 col-md-6">
+      <label for="age">Età</label>
+      <input
+        type="number"
+        id="age"
+        name="age"
+        class="form-control"
+        [(ngModel)]="user.age"
+      />
+    </div>
+
+    <div class="form-group col-sm-12 col-md-6">
+      <label for="fc">Codice Fiscale</label>
+      <input
+        type="text"
+        id="fc"
+        name="fc"
+        class="form-control"
+        [(ngModel)]="user.fc"
+      />
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="form-group col-sm-12 col-md-6">
+      <label for="email">Email</label>
+      <input
+        type="text"
+        id="email"
+        name="email"
+        class="form-control"
+        [(ngModel)]="user.email"
+      />
+    </div>
+
+    <div class="form-group col-sm-12 col-md-6">
+      <label for="phone">Telefono</label>
+      <input
+        type="text"
+        id="phone"
+        name="phone"
+        class="form-control"
+        [(ngModel)]="user.phone"
+      />
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="province">Provincia</label>
+    <input
+      type="text"
+      id="province"
+      name="province"
+      class="form-control"
+      [(ngModel)]="user.province"
+    />
+  </div>
+
+  <div class="form-group text-center my-5">
+    <button type="button" class="btn btn-success mx-1" (click)="createUser()">
+      Aggiungi
+    </button>
+
+    <button type="button" class="btn btn-danger mx-1" (click)="resetForm()">
+      Cancella
+    </button>
+
+    <button type="button" class="btn btn-primary mx-1" (click)="backToHome()">
+      Torna alla Homepage <fa name="home" size="lg" class="mx-2"></fa>
+    </button>
+  </div>
+</form>

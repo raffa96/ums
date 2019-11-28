@@ -1,0 +1,61 @@
+<table *ngIf="user" class="table table-striped table-sm table-dark">
+  <caption>
+    Dettaglio Utente:
+    {{
+      user.name
+    }}
+    {{
+      user.surname
+    }}
+  </caption>
+
+  <tbody>
+    <tr>
+      <th scope="row">Nome</th>
+
+      <td>{{ user.name }}</td>
+    </tr>
+
+    <tr>
+      <th scope="row">Cognome</th>
+
+      <td>{{ user.surname }}</td>
+    </tr>
+
+    <tr>
+      <th scope="row">Età</th>
+
+      <td>{{ user.age }}</td>
+    </tr>
+
+    <tr>
+      <th scope="row">Codice Fiscale</th>
+
+      <td>{{ user.fc }}</td>
+    </tr>
+
+    <tr>
+      <th scope="row">Email</th>
+
+      <td>{{ user.email }}</td>
+    </tr>
+
+    <tr>
+      <th scope="row">Telefono</th>
+
+      <td>{{ user.phone }}</td>
+    </tr>
+
+    <tr>
+      <th scope="row">Provincia</th>
+
+      <td>{{ user.province }}</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="container text-center">
+  <button type="button" class="btn btn-primary" (click)="backToHome()">
+    Torna alla Homepage <fa name="home" size="lg" class="mx-2"></fa>
+  </button>
+</div>

@@ -1,0 +1,69 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+  <a class="navbar-brand" href="#" (click)="backToHome($event)">{{ brand }}</a>
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    (click)="toggleMenu()"
+    data-target="#navbarCollapse"
+    aria-controls="navbarCollapse"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div
+    class="collapse navbar-collapse"
+    id="navbarCollapse"
+    [ngClass]="showMenu ? 'show' : 'hide'"
+  >
+    <ul class="navbar-nav mr-auto">
+      <li *ngIf="isUserLoggedIn" class="nav-item">
+        <a href="#" class="nav-link" routerLink="user/new">
+          <button type="button" class="btn btn-primary btn-sm">
+            Aggiungi utente <fa name="plus" size="lg" class="mx-2"></fa>
+          </button>
+        </a>
+      </li>
+    </ul>
+
+    <ul class="navbar-nav ml-auto">
+      <li *ngIf="!isUserLoggedIn" class="nav-item mx-2 my-2">
+        <button
+          type="button"
+          class="btn btn-primary btn-sm"
+          (click)="signUp($event)"
+        >
+          Registrati
+        </button>
+      </li>
+
+      <li *ngIf="!isUserLoggedIn" class="nav-item mx-2 my-2">
+        <button
+          type="button"
+          class="btn btn-success btn-sm"
+          (click)="login($event)"
+        >
+          Login
+        </button>
+      </li>
+
+      <li *ngIf="isUserLoggedIn" class="nav-item mx-2 my-2">
+        <span class="align-middle text-white">
+          {{ username }}
+          <fa name="user" size="lg" fixed="true" class="mx-2"></fa>
+        </span>
+      </li>
+
+      <li *ngIf="isUserLoggedIn" class="nav-item mx-2 my-2">
+        <button
+          type="button"
+          class="btn btn-danger btn-sm"
+          (click)="logout($event)"
+        >
+          Logout
+        </button>
+      </li>
+    </ul>
+  </div>
+</nav>

@@ -1,0 +1,26 @@
+<th scope="row">{{ user.id }}</th>
+<td>{{ user.name }}</td>
+<td>{{ user.surname }}</td>
+<td>{{ user.email }}</td>
+<td>{{ user.phone }}</td>
+<td>
+  <div class="row">
+    <div class="col-sm-12 col-md-4">
+      <button type="button" class="btn btn-info" (click)="showUserDetails()">
+        <fa name="info" fixed="true"></fa>
+      </button>
+    </div>
+
+    <div class="col-sm-12 col-md-4">
+      <button type="button" class="btn btn-success" (click)="modifyUser()">
+        <fa name="pencil" fixed="true"></fa>
+      </button>
+    </div>
+
+    <div class="col-sm-12 col-md-4">
+      <button type="button" class="btn btn-danger" (click)="deleteUser()">
+        <fa name="trash" fixed="true"></fa>
+      </button>
+    </div>
+  </div>
+</td>
