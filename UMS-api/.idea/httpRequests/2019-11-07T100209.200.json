@@ -1,0 +1,5 @@
+{
+    "data": [],
+    "message": "SQLSTATE[HY000] [2002] Connection refused (SQL: select * from `users` where `users`.`id` = 1 limit 1)",
+    "success": false
+}
